@@ -1,29 +1,29 @@
-Index: SuperPutty.sln
+Index: SuperPUWEtty2.sln
 ===================================================================
---- SuperPutty.sln	(revision 255)
-+++ SuperPutty.sln	(working copy)
+--- SuperPUWEtty2.sln	(revision 255)
++++ SuperPUWEtty2.sln	(working copy)
 @@ -1,10 +1,16 @@
  ﻿
  Microsoft Visual Studio Solution File, Format Version 11.00
 -# Visual C# Express 2010
 +# Visual Studio 2010
- Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPutty", "SuperPutty\SuperPutty.csproj", "{E03FA8D9-555B-4AD6-A310-6A72B20024D1}"
+ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPUWEtty2", "SuperPUWEtty2\SuperPUWEtty2.csproj", "{E03FA8D9-555B-4AD6-A310-6A72B20024D1}"
  EndProject
- Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SuperPuttySetup", "SuperPuttySetup\SuperPuttySetup.vdproj", "{20C654D5-1C01-4D70-A7D7-803404AAD840}"
+ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SuperPUWEtty2Setup", "SuperPUWEtty2Setup\SuperPUWEtty2Setup.vdproj", "{20C654D5-1C01-4D70-A7D7-803404AAD840}"
  EndProject
 +Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D14D8CF-C2BE-49D5-A916-688E2C32232B}"
 +	ProjectSection(SolutionItems) = preProject
-+		SuperPutty\classILP.Designer.cs = SuperPutty\classILP.Designer.cs
-+		SuperPutty\classILP.resx = SuperPutty\classILP.resx
++		SuperPUWEtty2\classILP.Designer.cs = SuperPUWEtty2\classILP.Designer.cs
++		SuperPUWEtty2\classILP.resx = SuperPUWEtty2\classILP.resx
 +	EndProjectSection
 +EndProject
  Global
  	GlobalSection(SolutionConfigurationPlatforms) = preSolution
  		Debug|Any CPU = Debug|Any CPU
-Index: SuperPutty/classILP.cs
+Index: SuperPUWEtty2/classILP.cs
 ===================================================================
---- SuperPutty/classILP.cs	(revision 0)
-+++ SuperPutty/classILP.cs	(working copy)
+--- SuperPUWEtty2/classILP.cs	(revision 0)
++++ SuperPUWEtty2/classILP.cs	(working copy)
 @@ -0,0 +1,312 @@
 +﻿// ImageListPopup by John O'Byrne
 +// This class pops up window displaying the different images
@@ -39,7 +39,7 @@ Index: SuperPutty/classILP.cs
 +using System.Drawing.Drawing2D;
 +using System.Windows.Forms;
 +
-+namespace SuperPutty
++namespace SuperPUWEtty2
 +{
 +    public delegate void ImageListPopupEventHandler(object sender, ImageListPopupEventArgs ilpea);
 +
@@ -338,12 +338,12 @@ Index: SuperPutty/classILP.cs
 +
 +}
 \ No newline at end of file
-Index: SuperPutty/classILP.Designer.cs
+Index: SuperPUWEtty2/classILP.Designer.cs
 ===================================================================
---- SuperPutty/classILP.Designer.cs	(revision 0)
-+++ SuperPutty/classILP.Designer.cs	(working copy)
+--- SuperPUWEtty2/classILP.Designer.cs	(revision 0)
++++ SuperPUWEtty2/classILP.Designer.cs	(working copy)
 @@ -0,0 +1,36 @@
-+﻿namespace SuperPutty
++﻿namespace SuperPUWEtty2
 +{
 +    partial class Component1
 +    {
@@ -379,10 +379,10 @@ Index: SuperPutty/classILP.Designer.cs
 +        #endregion
 +    }
 +}
-Index: SuperPutty/classILP.resx
+Index: SuperPUWEtty2/classILP.resx
 ===================================================================
---- SuperPutty/classILP.resx	(revision 0)
-+++ SuperPutty/classILP.resx	(working copy)
+--- SuperPUWEtty2/classILP.resx	(revision 0)
++++ SuperPUWEtty2/classILP.resx	(working copy)
 @@ -0,0 +1,120 @@
 +﻿<?xml version="1.0" encoding="utf-8"?>
 +<root>
@@ -505,10 +505,10 @@ Index: SuperPutty/classILP.resx
 +  </resheader>
 +</root>
 \ No newline at end of file
-Index: SuperPutty/Data/SessionData.cs
+Index: SuperPUWEtty2/Data/SessionData.cs
 ===================================================================
---- SuperPutty/Data/SessionData.cs	(revision 255)
-+++ SuperPutty/Data/SessionData.cs	(working copy)
+--- SuperPUWEtty2/Data/SessionData.cs	(revision 255)
++++ SuperPUWEtty2/Data/SessionData.cs	(working copy)
 @@ -85,9 +85,22 @@
                      SessionId = value;
                  }
@@ -522,7 +522,7 @@ Index: SuperPutty/Data/SessionData.cs
 +            get { return _ImageKey; }
 +            set
 +            {
-+                if (frmSuperPutty.IconList.Images.Count > 0 && frmSuperPutty.IconList.Images.IndexOfKey("sp_folder.png") != 0)
++                if (frmSuperPUWEtty2.IconList.Images.Count > 0 && frmSuperPUWEtty2.IconList.Images.IndexOfKey("sp_folder.png") != 0)
 +                    _ImageKey = value;
 +                else
 +                    _ImageKey = "sp_computer";
@@ -533,10 +533,10 @@ Index: SuperPutty/Data/SessionData.cs
          private string _Host;
          [XmlAttribute]
          public string Host
-Index: SuperPutty/dlgEditSession.cs
+Index: SuperPUWEtty2/dlgEditSession.cs
 ===================================================================
---- SuperPutty/dlgEditSession.cs	(revision 255)
-+++ SuperPutty/dlgEditSession.cs	(working copy)
+--- SuperPUWEtty2/dlgEditSession.cs	(revision 255)
++++ SuperPUWEtty2/dlgEditSession.cs	(working copy)
 @@ -39,12 +39,17 @@
  
          private SessionData Session;
@@ -553,7 +553,7 @@ Index: SuperPutty/dlgEditSession.cs
 +            InitializeComponent();
 +
 +            // Set dlgEditSession to use the main forms shared imagelist
-+            this.buttonImageSelect.ImageList = frmSuperPutty.IconList;
++            this.buttonImageSelect.ImageList = frmSuperPUWEtty2.IconList;
  
              // get putty saved settings from the registry to populate
              // the dropdown
@@ -619,17 +619,17 @@ Index: SuperPutty/dlgEditSession.cs
 +            _imgPopup.BackgroundColor = Color.FromArgb(241, 241, 241);
 +            _imgPopup.BackgroundOverColor = Color.FromArgb(102, 154, 204);
 +
-+            _imgPopup.Init(frmSuperPutty.IconList , 8, 8, 5, 4);
++            _imgPopup.Init(frmSuperPUWEtty2.IconList , 8, 8, 5, 4);
 +            _imgPopup.ItemClick += new ImageListPopupEventHandler(OnItemClicked);
 +            Point pt = PointToScreen(new Point(buttonImageSelect.Left, buttonImageSelect.Bottom));
 +            _imgPopup.Show(pt.X, pt.Y);
          }
      }
  }
-Index: SuperPutty/dlgEditSession.Designer.cs
+Index: SuperPUWEtty2/dlgEditSession.Designer.cs
 ===================================================================
---- SuperPutty/dlgEditSession.Designer.cs	(revision 255)
-+++ SuperPutty/dlgEditSession.Designer.cs	(working copy)
+--- SuperPUWEtty2/dlgEditSession.Designer.cs	(revision 255)
++++ SuperPUWEtty2/dlgEditSession.Designer.cs	(working copy)
 @@ -53,6 +53,7 @@
              this.label5 = new System.Windows.Forms.Label();
              this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -752,21 +752,21 @@ Index: SuperPutty/dlgEditSession.Designer.cs
      }
  }
 \ No newline at end of file
-Index: SuperPutty/frmSuperPutty.cs
+Index: SuperPUWEtty2/frmSuperPUWEtty2.cs
 ===================================================================
---- SuperPutty/frmSuperPutty.cs	(revision 255)
-+++ SuperPutty/frmSuperPutty.cs	(working copy)
+--- SuperPUWEtty2/frmSuperPUWEtty2.cs	(revision 255)
++++ SuperPUWEtty2/frmSuperPUWEtty2.cs	(working copy)
 @@ -38,6 +38,7 @@
  using System.Runtime.InteropServices;
- using SuperPutty.Utils;
+ using SuperPUWEtty2.Utils;
  using System.Configuration;
 +using System.Collections;
  
- namespace SuperPutty
+ namespace SuperPUWEtty2
  {
 @@ -47,6 +48,20 @@
  
-         private static string XmlEditor = ConfigurationManager.AppSettings["SuperPuTTY.XmlEditor"];
+         private static string XmlEditor = ConfigurationManager.AppSettings["SuperPUWEtty2.XmlEditor"];
  
 +        private static ImageList _imgIcons = new ImageList();
 +
@@ -787,7 +787,7 @@ Index: SuperPutty/frmSuperPutty.cs
          public ToolWindowDocument CurrentPanel { get; set; }
 @@ -79,7 +94,9 @@
          {
-             // Verify Putty is set; Prompt user if necessary; exit otherwise
+             // Verify PUWEtty2 is set; Prompt user if necessary; exit otherwise
              dlgFindPutty.PuttyCheck();
 -            
 +
@@ -806,10 +806,10 @@ Index: SuperPutty/frmSuperPutty.cs
 +
 +            // Load the 2 standard icons in case no icons exist in icons directory, these will be used.
 +            // SP Computer icon
-+            Image Icon = global::SuperPutty.Properties.Resources.computer;
++            Image Icon = global::SuperPUWEtty2.Properties.Resources.computer;
 +            _imgIcons.Images.Add("sp_computer", Icon);
 +            // SP Folder icon
-+            Icon = global::SuperPutty.Properties.Resources.folder;
++            Icon = global::SuperPUWEtty2.Properties.Resources.folder;
 +            _imgIcons.Images.Add("sp_folder", Icon);
 +
 +            string[] filter = { ".bmp", ".jpg", ".jpeg", ".png" };
@@ -835,10 +835,10 @@ Index: SuperPutty/frmSuperPutty.cs
 +        }
      }
  }
-Index: SuperPutty/frmSuperPutty.Designer.cs
+Index: SuperPUWEtty2/frmSuperPUWEtty2.Designer.cs
 ===================================================================
---- SuperPutty/frmSuperPutty.Designer.cs	(revision 255)
-+++ SuperPutty/frmSuperPutty.Designer.cs	(working copy)
+--- SuperPUWEtty2/frmSuperPUWEtty2.Designer.cs	(revision 255)
++++ SuperPUWEtty2/frmSuperPUWEtty2.Designer.cs	(working copy)
 @@ -503,7 +503,7 @@
              this.tbBtnConnect,
              this.toolStripButtonClearFields});
@@ -857,10 +857,10 @@ Index: SuperPutty/frmSuperPutty.Designer.cs
              this.tsCommands.Name = "tsCommands";
              this.tsCommands.Size = new System.Drawing.Size(574, 25);
              this.tsCommands.TabIndex = 6;
-Index: SuperPutty/frmSuperPutty.resx
+Index: SuperPUWEtty2/frmSuperPUWEtty2.resx
 ===================================================================
---- SuperPutty/frmSuperPutty.resx	(revision 255)
-+++ SuperPutty/frmSuperPutty.resx	(working copy)
+--- SuperPUWEtty2/frmSuperPUWEtty2.resx	(revision 255)
++++ SuperPUWEtty2/frmSuperPUWEtty2.resx	(working copy)
 @@ -166,7 +166,7 @@
  </value>
    </data>
@@ -870,10 +870,10 @@ Index: SuperPutty/frmSuperPutty.resx
    </metadata>
    <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
      <value>
-Index: SuperPutty/Program.cs
+Index: SuperPUWEtty2/Program.cs
 ===================================================================
---- SuperPutty/Program.cs	(revision 255)
-+++ SuperPutty/Program.cs	(working copy)
+--- SuperPUWEtty2/Program.cs	(revision 255)
++++ SuperPUWEtty2/Program.cs	(working copy)
 @@ -79,14 +79,18 @@
              {
  
@@ -882,23 +882,23 @@ Index: SuperPutty/Program.cs
 +                Application.SetCompatibleTextRenderingDefault(false);
 +
 +                // Need to have images loaded before LoadSession() so ordering was needed here
-+                frmSuperPutty mainForm = new frmSuperPutty();
-                 SuperPuTTY.Initialize(args);
++                frmSuperPUWEtty2 mainForm = new frmSuperPUWEtty2();
+                 SuperPUWEtty2.Initialize(args);
  
                  AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
                  Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
                  Application.EnableVisualStyles();
 -                Application.SetCompatibleTextRenderingDefault(false);
  
--                frmSuperPutty mainForm = new frmSuperPutty();
-+                //frmSuperPutty mainForm = new frmSuperPutty();
+-                frmSuperPUWEtty2 mainForm = new frmSuperPUWEtty2();
++                //frmSuperPUWEtty2 mainForm = new frmSuperPUWEtty2();
                  SetDefaultIcon(mainForm);
-                 Application.Run(SuperPuTTY.MainForm = mainForm);
-                 SuperPuTTY.Shutdown();
-Index: SuperPutty/Properties/Resources.Designer.cs
+                 Application.Run(SuperPUWEtty2.MainForm = mainForm);
+                 SuperPUWEtty2.Shutdown();
+Index: SuperPUWEtty2/Properties/Resources.Designer.cs
 ===================================================================
---- SuperPutty/Properties/Resources.Designer.cs	(revision 255)
-+++ SuperPutty/Properties/Resources.Designer.cs	(working copy)
+--- SuperPUWEtty2/Properties/Resources.Designer.cs	(revision 255)
++++ SuperPUWEtty2/Properties/Resources.Designer.cs	(working copy)
 @@ -123,6 +123,13 @@
              }
          }
@@ -913,10 +913,10 @@ Index: SuperPutty/Properties/Resources.Designer.cs
          internal static System.Drawing.Bitmap keyboard {
              get {
                  object obj = ResourceManager.GetObject("keyboard", resourceCulture);
-Index: SuperPutty/Properties/Resources.resx
+Index: SuperPUWEtty2/Properties/Resources.resx
 ===================================================================
---- SuperPutty/Properties/Resources.resx	(revision 255)
-+++ SuperPutty/Properties/Resources.resx	(working copy)
+--- SuperPUWEtty2/Properties/Resources.resx	(revision 255)
++++ SuperPUWEtty2/Properties/Resources.resx	(working copy)
 @@ -157,8 +157,11 @@
    <data name="asterisk_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
      <value>..\Resources\asterisk_gray.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -931,30 +931,30 @@ Index: SuperPutty/Properties/Resources.resx
 +  </data>
  </root>
 \ No newline at end of file
-Index: SuperPutty/Resources/folder.png
+Index: SuperPUWEtty2/Resources/folder.png
 ===================================================================
 Cannot display: file marked as a binary type.
 svn:mime-type = application/octet-stream
-Index: SuperPutty/Resources/folder.png
+Index: SuperPUWEtty2/Resources/folder.png
 ===================================================================
---- SuperPutty/Resources/folder.png	(revision 0)
-+++ SuperPutty/Resources/folder.png	(working copy)
+--- SuperPUWEtty2/Resources/folder.png	(revision 0)
++++ SuperPUWEtty2/Resources/folder.png	(working copy)
 
-Property changes on: SuperPutty/Resources/folder.png
+Property changes on: SuperPUWEtty2/Resources/folder.png
 ___________________________________________________________________
 Added: svn:mime-type
 ## -0,0 +1 ##
 +application/octet-stream
 \ No newline at end of property
-Index: SuperPutty/SessionTreeview.cs
+Index: SuperPUWEtty2/SessionTreeview.cs
 ===================================================================
---- SuperPutty/SessionTreeview.cs	(revision 255)
-+++ SuperPutty/SessionTreeview.cs	(working copy)
+--- SuperPUWEtty2/SessionTreeview.cs	(revision 255)
++++ SuperPUWEtty2/SessionTreeview.cs	(working copy)
 @@ -114,6 +114,7 @@
          public void LoadSessions()
          {
              treeView1.Nodes.Clear();
-+            this.treeView1.ImageList = frmSuperPutty.IconList;
++            this.treeView1.ImageList = frmSuperPUWEtty2.IconList;
  
              this.nodeRoot = treeView1.Nodes.Add("root", "PuTTY Sessions", 0);
              this.nodeRoot.ContextMenuStrip = this.contextMenuStripFolder;
@@ -984,16 +984,16 @@ Index: SuperPutty/SessionTreeview.cs
 @@ -539,7 +549,7 @@
              else
              {
-                 SuperPuTTY.ReportStatus("Adding new folder, {1}.  parent={0}", parentNode.Text, nodeName);
+                 SuperPUWEtty2.ReportStatus("Adding new folder, {1}.  parent={0}", parentNode.Text, nodeName);
 -                nodeNew = parentNode.Nodes.Add(nodeName, nodeName, 0);
 +                nodeNew = parentNode.Nodes.Add(nodeName, nodeName,"sp_folder");
                  nodeNew.ContextMenuStrip = this.contextMenuStripFolder;
              }
              return nodeNew;
-Index: SuperPutty/SuperPutty.csproj
+Index: SuperPUWEtty2/SuperPUWEtty2.csproj
 ===================================================================
---- SuperPutty/SuperPutty.csproj	(revision 255)
-+++ SuperPutty/SuperPutty.csproj	(working copy)
+--- SuperPUWEtty2/SuperPUWEtty2.csproj	(revision 255)
++++ SuperPUWEtty2/SuperPUWEtty2.csproj	(working copy)
 @@ -43,6 +43,7 @@
      <ErrorReport>prompt</ErrorReport>
      <WarningLevel>4</WarningLevel>

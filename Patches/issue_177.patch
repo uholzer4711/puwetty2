@@ -1,7 +1,7 @@
-Index: frmSuperPutty.cs
+Index: frmSuperPUWEtty2.cs
 ===================================================================
---- frmSuperPutty.cs	(revision 234)
-+++ frmSuperPutty.cs	(working copy)
+--- frmSuperPUWEtty2.cs	(revision 234)
++++ frmSuperPUWEtty2.cs	(working copy)
 @@ -84,6 +84,7 @@
          private Rectangle lastNormalDesktopBounds;
          private ChildWindowFocusHelper focusHelper;

@@ -80,8 +80,8 @@ Index: dlgEditSession.Designer.cs
 --- dlgEditSession.Designer.cs	(revision 117)
 +++ dlgEditSession.Designer.cs	(working copy)
 @@ -1,4 +1,4 @@
--﻿namespace SuperPutty
-+namespace SuperPutty
+-﻿namespace SuperPUWEtty2
++namespace SuperPUWEtty2
  {
      partial class dlgEditSession
      {
@@ -144,7 +144,7 @@ Index: dlgEditSession.Designer.cs
 -            this.label4.Size = new System.Drawing.Size(114, 15);
 +            this.label4.Size = new System.Drawing.Size(121, 15);
              this.label4.TabIndex = 9;
--            this.label4.Text = "Putty Session Profile";
+-            this.label4.Text = "PUWEtty2 Session Profile";
 +            this.label4.Text = "PuTTY Session Profile";
              // 
              // comboBoxPuttyProfile

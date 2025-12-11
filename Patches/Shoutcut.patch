@@ -12,32 +12,32 @@ Index: App.config
 +      <setting name="Action_Host_Shortcut" serializeAs="String">
 +        <value>None</value>
 +      </setting>
-     </SuperPutty.Properties.Settings>
+     </SuperPUWEtty2.Properties.Settings>
    </userSettings>
  <startup><supportedRuntime version="v2.0.50727"/></startup></configuration>
-Index: frmSuperPutty.cs
+Index: frmSuperPUWEtty2.cs
 ===================================================================
---- frmSuperPutty.cs	(revision 323)
-+++ frmSuperPutty.cs	(working copy)
+--- frmSuperPUWEtty2.cs	(revision 323)
++++ frmSuperPUWEtty2.cs	(working copy)
 @@ -1311,6 +1311,14 @@
-                         SuperPuTTY.OpenPuttySession(p.Session); 
+                         SuperPUWEtty2.OpenPuttySession(p.Session); 
                      }
                      break;
-+                case SuperPuttyAction.CommandLine:
++                case SuperPUWEtty2Action.CommandLine:
 +                    KeyEventWindowActivator.ActivateForm(this);
 +                    this.tsSendCommandCombo.Focus();
 +                    break;
-+                case SuperPuttyAction.Host:
++                case SuperPUWEtty2Action.Host:
 +                    KeyEventWindowActivator.ActivateForm(this);
 +                    this.tbTxtBoxHost.Focus();
 +                    break;
                  default:
                      success = false;
                      break;
-Index: frmSuperPutty.Designer.cs
+Index: frmSuperPUWEtty2.Designer.cs
 ===================================================================
---- frmSuperPutty.Designer.cs	(revision 323)
-+++ frmSuperPutty.Designer.cs	(working copy)
+--- frmSuperPUWEtty2.Designer.cs	(revision 323)
++++ frmSuperPUWEtty2.Designer.cs	(working copy)
 @@ -29,21 +29,21 @@
          private void InitializeComponent()
          {
@@ -72,7 +72,7 @@ Index: frmSuperPutty.Designer.cs
 +            WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient3 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
 +            WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient6 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
 +            WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient7 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
-             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuperPutty));
+             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuperPUWEtty2));
              this.menuStrip1 = new System.Windows.Forms.MenuStrip();
              this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 @@ -69,7 +69,11 @@
@@ -90,7 +90,7 @@ Index: frmSuperPutty.Designer.cs
 @@ -115,10 +119,6 @@
              this.notifyicon = new System.Windows.Forms.NotifyIcon(this.components);
              this.notifyIconContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-             this.exitSuperPuTTYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+             this.exitSuperPUWEtty2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 -            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 -            this.quickConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 -            this.sendCommandsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +104,7 @@ Index: frmSuperPutty.Designer.cs
              // 
 +            // quickConnectionToolStripMenuItem
 +            // 
-+            this.quickConnectionToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowToolBarConnections;
++            this.quickConnectionToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowToolBarConnections;
 +            this.quickConnectionToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 +            this.quickConnectionToolStripMenuItem.Name = "quickConnectionToolStripMenuItem";
 +            this.quickConnectionToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
@@ -113,7 +113,7 @@ Index: frmSuperPutty.Designer.cs
 +            // 
 +            // sendCommandsToolStripMenuItem
 +            // 
-+            this.sendCommandsToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowToolBarCommands;
++            this.sendCommandsToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowToolBarCommands;
 +            this.sendCommandsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 +            this.sendCommandsToolStripMenuItem.Name = "sendCommandsToolStripMenuItem";
 +            this.sendCommandsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
@@ -127,7 +127,7 @@ Index: frmSuperPutty.Designer.cs
              // 
 +            // showStatusBarToolStripMenuItem
 +            // 
-+            this.showStatusBarToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowStatusBar;
++            this.showStatusBarToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowStatusBar;
 +            this.showStatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 +            this.showStatusBarToolStripMenuItem.Name = "showStatusBarToolStripMenuItem";
 +            this.showStatusBarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
@@ -284,8 +284,8 @@ Index: frmSuperPutty.Designer.cs
              this.tsCommands.TabIndex = 6;
              // 
 @@ -759,40 +793,6 @@
-             this.exitSuperPuTTYToolStripMenuItem.Text = "Exit SuperPuTTY";
-             this.exitSuperPuTTYToolStripMenuItem.Click += new System.EventHandler(this.exitSuperPuTTYToolStripMenuItem_Click);
+             this.exitSuperPUWEtty2ToolStripMenuItem.Text = "Exit SuperPUWEtty2";
+             this.exitSuperPUWEtty2ToolStripMenuItem.Click += new System.EventHandler(this.exitSuperPUWEtty2ToolStripMenuItem_Click);
              // 
 -            // alwaysOnTopToolStripMenuItem
 -            // 
@@ -296,7 +296,7 @@ Index: frmSuperPutty.Designer.cs
 -            // 
 -            // quickConnectionToolStripMenuItem
 -            // 
--            this.quickConnectionToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowToolBarConnections;
+-            this.quickConnectionToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowToolBarConnections;
 -            this.quickConnectionToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 -            this.quickConnectionToolStripMenuItem.Name = "quickConnectionToolStripMenuItem";
 -            this.quickConnectionToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
@@ -305,7 +305,7 @@ Index: frmSuperPutty.Designer.cs
 -            // 
 -            // sendCommandsToolStripMenuItem
 -            // 
--            this.sendCommandsToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowToolBarCommands;
+-            this.sendCommandsToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowToolBarCommands;
 -            this.sendCommandsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 -            this.sendCommandsToolStripMenuItem.Name = "sendCommandsToolStripMenuItem";
 -            this.sendCommandsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
@@ -314,20 +314,20 @@ Index: frmSuperPutty.Designer.cs
 -            // 
 -            // showStatusBarToolStripMenuItem
 -            // 
--            this.showStatusBarToolStripMenuItem.Checked = global::SuperPutty.Properties.Settings.Default.ShowStatusBar;
+-            this.showStatusBarToolStripMenuItem.Checked = global::SuperPUWEtty2.Properties.Settings.Default.ShowStatusBar;
 -            this.showStatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
 -            this.showStatusBarToolStripMenuItem.Name = "showStatusBarToolStripMenuItem";
 -            this.showStatusBarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
 -            this.showStatusBarToolStripMenuItem.Text = "Status Bar";
 -            this.showStatusBarToolStripMenuItem.Click += new System.EventHandler(this.toggleCheckedState);
 -            // 
-             // frmSuperPutty
+             // frmSuperPUWEtty2
              // 
              this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-Index: frmSuperPutty.resx
+Index: frmSuperPUWEtty2.resx
 ===================================================================
---- frmSuperPutty.resx	(revision 323)
-+++ frmSuperPutty.resx	(working copy)
+--- frmSuperPUWEtty2.resx	(revision 323)
++++ frmSuperPUWEtty2.resx	(working copy)
 @@ -123,12 +123,12 @@
    <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
      <value>468, 17</value>
@@ -375,7 +375,7 @@ Index: Properties/Settings.Designer.cs
          }
 +        
 +        [global::System.Configuration.UserScopedSettingAttribute()]
-+        [global::System.Configuration.SettingsProviderAttribute(typeof(SuperPutty.Utils.PortableSettingsProvider))]
++        [global::System.Configuration.SettingsProviderAttribute(typeof(SuperPUWEtty2.Utils.PortableSettingsProvider))]
 +        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
 +        [global::System.Configuration.DefaultSettingValueAttribute("None")]
 +        public global::System.Windows.Forms.Keys Action_CommandLine_Shortcut {
@@ -388,7 +388,7 @@ Index: Properties/Settings.Designer.cs
 +        }
 +        
 +        [global::System.Configuration.UserScopedSettingAttribute()]
-+        [global::System.Configuration.SettingsProviderAttribute(typeof(SuperPutty.Utils.PortableSettingsProvider))]
++        [global::System.Configuration.SettingsProviderAttribute(typeof(SuperPUWEtty2.Utils.PortableSettingsProvider))]
 +        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
 +        [global::System.Configuration.DefaultSettingValueAttribute("None")]
 +        public global::System.Windows.Forms.Keys Action_Host_Shortcut {
@@ -406,22 +406,22 @@ Index: Properties/Settings.settings
 --- Properties/Settings.settings	(revision 323)
 +++ Properties/Settings.settings	(working copy)
 @@ -110,5 +110,11 @@
-     <Setting Name="Action_DuplicateSession_Shortcut" Provider="SuperPutty.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
+     <Setting Name="Action_DuplicateSession_Shortcut" Provider="SuperPUWEtty2.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
        <Value Profile="(Default)">None</Value>
      </Setting>
-+    <Setting Name="Action_CommandLine_Shortcut" Provider="SuperPutty.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
++    <Setting Name="Action_CommandLine_Shortcut" Provider="SuperPUWEtty2.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
 +      <Value Profile="(Default)">None</Value>
 +    </Setting>
-+    <Setting Name="Action_Host_Shortcut" Provider="SuperPutty.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
++    <Setting Name="Action_Host_Shortcut" Provider="SuperPUWEtty2.Utils.PortableSettingsProvider" Type="System.Windows.Forms.Keys" Scope="User">
 +      <Value Profile="(Default)">None</Value>
 +    </Setting>
    </Settings>
  </SettingsFile>
 \ No newline at end of file
-Index: SuperPuTTY.cs
+Index: SuperPUWEtty2.cs
 ===================================================================
---- SuperPuTTY.cs	(revision 323)
-+++ SuperPuTTY.cs	(working copy)
+--- SuperPUWEtty2.cs	(revision 323)
++++ SuperPUWEtty2.cs	(working copy)
 @@ -645,7 +645,9 @@
          FullScreen,
          OpenSession,

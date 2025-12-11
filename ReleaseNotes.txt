@@ -1,5 +1,5 @@
 1.4.0.9
- - Fixes several bugs and feature updates since 1.4.0.8 See https://github.com/jimradford/superputty/compare/1.4.0.8...master for all 79 commits
+ - Fixes several bugs and feature updates since 1.4.0.8 See https://github.com/jimradford/superpuwetty2/compare/1.4.0.8...master for all 79 commits
 1.4.0.8
 - Fixes Issue #528 mintty (2.1.4) exiting and throwing exception due to default behavior change in mintty daemonize option.
 - Fixes Issue #546 Option Added to override and allow -pw <password> command line option to be sent. Defaults to not allow the -pw option.
@@ -39,7 +39,7 @@
 - Fixes Issue #533 parser properly allows for '.' character in usernames or groupnames
 - Fixes Issue #541 Adds support for a Wix based installer 
   Adds License in .rtf format (for installer)
-  Removed legacy SuperPutty Setup from solution file
+  Removed legacy SuperPUWEtty2 Setup from solution file
 - Adds GlobalWindowEvents to Project file, Merge pull request #538 from joeyhub/master Improved desktop UI performance 
 - Merge pull request #524 from jbondhus/master Searching is more robust and uses glob style
 - Merge pull request #529 from kswmsw/download-instructions-522 Link to download and docs from README.
@@ -79,7 +79,7 @@
 1.4.0.3
 - 250: misfunction of Tab key  (Large change to key handling to address lost keyup events)
 - 264: Locked Tabs (Added option to restrict floating windows)
-- 267: Alt+Tab superputty window randomly does not come to foreground, tabs have no focus when it does (Cleanup, handle new message value)
+- 267: Alt+Tab superpuwetty2 window randomly does not come to foreground, tabs have no focus when it does (Cleanup, handle new message value)
 - 269: Icon in tab (Fix issue with missing session.ImageKey)
 - 269: Icon in tab (Enable from Options, GUI)
 - 291: Open in the Sessions or Layout Views (Added additional check for hidden tool windows)
@@ -133,7 +133,7 @@
 
 1.3.0.9
 - 226: 	Problem with window (issue with 1st build on 1.3.0.8)
-- 230: 	SuperPuTTY 1.3.0.8, Strange output under cursor (issue with 1st build of 1.3.0.8)
+- 230: 	SuperPUWEtty2 1.3.0.8, Strange output under cursor (issue with 1st build of 1.3.0.8)
 - 228: 	Tab closing - standard behavior (Added FormClosed handler to activate right most form in pane)
 - 231: 	Superputty Error on first startup on new system (Handle error during update)
 - More logging
@@ -148,10 +148,10 @@
 - 154: 	Configurable hotkeys to switch tabs (Configure from Options, Shortcuts)
 - 191: 	F11 et progress editor (Shortcut is configurable now)
 - 199: 	Unable to Connect Dialog (added code to not capture the error popup)
-- 214: 	Hosts moved to root (under Putty Sessions tree) are forever stuck there.  (Fix for bug introduced in 1.3.0.4)
+- 214: 	Hosts moved to root (under PUWEtty2 Sessions tree) are forever stuck there.  (Fix for bug introduced in 1.3.0.4)
 
 1.3.0.6
-- 180: 	Possibility to leave host name empty in SuperPutty session (made modifications throughout to support)
+- 180: 	Possibility to leave host name empty in SuperPUWEtty2 session (made modifications throughout to support)
 - 203: 	Patch - Host icon changer for 1.3 svn
 - 207: 	Ctrl+Tab - Display focus changes but input focus remains on previous session. (added retry logic to focusing the putty)
 - 212: 	v1.3.0.5 & MRU option (like Windows Alt+Tab) - doesn't work (Added new implementation for MRU)
@@ -203,7 +203,7 @@
 
 =============================================================================================
 1.2.0.14
-- 138 - After using context menu of tray icon to exit SuperPutty it can't be started again
+- 138 - After using context menu of tray icon to exit SuperPUWEtty2 it can't be started again
 - 139 - Change of option "Restore Window Size and Location" is only recognized after restart
 - 140 -	Edit Session: "Default Settings" appears twice in combo box "PuTTY Session Profile"
 - 141 - Clear Window bar on closing session
@@ -217,8 +217,8 @@
 - 125 - Tray icon size problem
 - 129 -	Context menu remains partly visible when invoking "Change Settings"
 - 132 - AboutBox: Urls are detected but nothing happens on mouse click
-- 133 - Possibility to have SuperPutty sessions w/o associated PuTTY Session Profile (empty allowed)
-- 134 -	Cannot open superputty (Fail to start if sessions.xml unparseable - added try/catch)
+- 133 - Possibility to have SuperPUWEtty2 sessions w/o associated PuTTY Session Profile (empty allowed)
+- 134 -	Cannot open superpuwetty2 (Fail to start if sessions.xml unparseable - added try/catch)
 - 135 - Setting to have the hostname not clear after opening a new session (overall round of clean up and tweaks)
 
 1.2.0.11
@@ -231,7 +231,7 @@
 - 108 - Avoid additional item in task bar for modal dialogs (options, create/edit session ...)
 - 117 - Connect in New Instance
 - 116/119 - Minior Enhancement: Focus Window that is restarted automatically (Change for 107 addresses this)
-- 120 - Single Putty window can disappear -- window seems unrecoverable (rollback dock panel to 2.4)
+- 120 - Single PUWEtty2 window can disappear -- window seems unrecoverable (rollback dock panel to 2.4)
 - More focus tweaking and logging
 - Support for MinTTY for local shell (from akngo fork)
 - Focus child on resize, restore, mouse move (from akngo fork)
@@ -240,12 +240,12 @@
 1.2.0.9
 - 30 - Open Multiple sessions at one time (Sessions folder Connect All.  Warning if > 10 to open)
 - 97 - Embedded PuTTY frames can lose their visual tabs, leading to other erratic behavior (Method 1) (user confirmed fix in last build)
-- 106 - Putty sessions are collapsed at startup (added a user preference for this)
+- 106 - PUWEtty2 sessions are collapsed at startup (added a user preference for this)
 - 109 - Add cancel button to file transfer login dialog
 - 110 -	Add close button or drop down menu to file transfer window
 - 112 - Option to enable/disable view of Sessions and Layouts tabs (View->Sessions, View->Layouts, View->Log Viewer)
 - More focus tweaking and logging
-- Sessions Tree - Added Connect in New Instace to open session in new instance of SuperPuTTY
+- Sessions Tree - Added Connect in New Instace to open session in new instance of SuperPUWEtty2
 - Closed 7, 20, 73 - Fix in #92 seems to address all these issues.
 - Changed logging statements to remove password
 
@@ -257,14 +257,14 @@
 - #105 - Error on Layouts
 
 1.2.0.7
-- #13 - cant read all sessions already existed in putty.  (File, Import Sessions, From Putty settings)
-- #22 - Importing connection list from PuTTY Connection Manager to Superputty (File, Import Sessions, From Putty CM)
-- #44 - Open back previously opened session after crash or close of SuperPutty (Set Default Layout to '<AutoRestore>')
+- #13 - cant read all sessions already existed in putty.  (File, Import Sessions, From PUWEtty2 settings)
+- #22 - Importing connection list from PuTTY Connection Manager to Superputty (File, Import Sessions, From PUWEtty2 CM)
+- #44 - Open back previously opened session after crash or close of SuperPUWEtty2 (Set Default Layout to '<AutoRestore>')
 - #94 - Visual Enhancments (Make main form icon default icon throughout application)
-- Added 'Connect External' in session tree view - Opens Putty session outside of SuperPuTTY.
+- Added 'Connect External' in session tree view - Opens PUWEtty2 session outside of SuperPUWEtty2.
 
 1.2.0.6
-- #92 - SuperPutty opens sessions in a new Putty Window
+- #92 - SuperPUWEtty2 opens sessions in a new PUWEtty2 Window
 - #96 - Problems when editing sessions w/non-standard ports
 
 1.2.0.5
@@ -291,7 +291,7 @@
 - #71 - Check that session or folder name is not empty (bug fix)
 - #72 - cygterm Appearance settings not honored (added '-load' flag support for cygterm)
 - #68 - Added PuTTY context menu items to PuttyPanel
-- #74 - SuperPutty 1.2.0.2 does not run under Program FIles
+- #74 - SuperPUWEtty2 1.2.0.2 does not run under Program FIles
 
 1.2.0.2
 - #64 - Issue with PortableSettings w/numeric hostnames (disable settings)
@@ -306,5 +306,5 @@
 - Moved Settings file to %USERPROFILE% or install dir (will need to reconfigure)
 - Connection tool bar
 - Send Command tool bar
-- Single instance support (edit SuperPutty.exe.config to enable)
+- Single instance support (edit SuperPUWEtty2.exe.config to enable)
 - Command Line interface (see issue 26...wiki page later with full usage

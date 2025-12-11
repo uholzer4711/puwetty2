@@ -1,7 +1,7 @@
-Index: branches/1.4/SuperPutty/frmSuperPutty.cs
+Index: branches/1.4/SuperPUWEtty2/frmSuperPUWEtty2.cs
 ===================================================================
---- frmSuperPutty.cs	(revision 326)
-+++ frmSuperPutty.cs	(working copy)
+--- frmSuperPUWEtty2.cs	(revision 326)
++++ frmSuperPUWEtty2.cs	(working copy)
 @@ -550,7 +550,10 @@
                      // toolbars
                      this.MainForm.tsCommands.Visible = false;
@@ -28,10 +28,10 @@ Index: branches/1.4/SuperPutty/frmSuperPutty.cs
 +                    this.MainForm.quickConnectionToolStripMenuItem.Checked = this.ConnectionBar;
 +
 +                    // save
-+                    SuperPuTTY.Settings.ShowToolBarConnections = this.MainForm.quickConnectionToolStripMenuItem.Checked;
-+                    SuperPuTTY.Settings.ShowToolBarCommands = this.MainForm.sendCommandsToolStripMenuItem.Checked;
++                    SuperPUWEtty2.Settings.ShowToolBarConnections = this.MainForm.quickConnectionToolStripMenuItem.Checked;
++                    SuperPUWEtty2.Settings.ShowToolBarCommands = this.MainForm.sendCommandsToolStripMenuItem.Checked;
 +
-+                    SuperPuTTY.Settings.Save();
++                    SuperPUWEtty2.Settings.Save();
 +
 +
                      // menubar

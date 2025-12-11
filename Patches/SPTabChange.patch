@@ -5,10 +5,10 @@ Index: ctlApplicationPanel.cs
 @@ -32,6 +32,7 @@
  using log4net;
  using System.Configuration;
- using SuperPutty.Utils;
+ using SuperPUWEtty2.Utils;
 +using System.Text;
  
- namespace SuperPutty
+ namespace SuperPUWEtty2
  {
 @@ -96,8 +97,8 @@
              //this.m_windowActivator = new SetFGCombinedWindowActivator();

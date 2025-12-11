@@ -1,7 +1,7 @@
-Index: SuperPutty/SessionTreeview.cs
+Index: SuperPUWEtty2/SessionTreeview.cs
 ===================================================================
---- SuperPutty/SessionTreeview.cs	(revision 242)
-+++ SuperPutty/SessionTreeview.cs	(working copy)
+--- SuperPUWEtty2/SessionTreeview.cs	(revision 242)
++++ SuperPUWEtty2/SessionTreeview.cs	(working copy)
 @@ -565,7 +565,8 @@
              parentNodeNames.Reverse();
              String sessionId = String.Join(SessionIdDelim, parentNodeNames.ToArray());
@@ -9,7 +9,7 @@ Index: SuperPutty/SessionTreeview.cs
 -            session.SessionId = sessionId;
 +            //session.SessionId = sessionId;
 +            if (session != null) session.SessionId = sessionId;
-             //SuperPuTTY.SaveSessions();
+             //SuperPUWEtty2.SaveSessions();
              //session.SaveToRegistry();
          }
 @@ -666,7 +667,8 @@
