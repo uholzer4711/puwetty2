@@ -191,7 +191,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\LayoutData.cs" />
-    <Compile Include="Data\PuttyDataHelper.cs" />
+    <Compile Include="Data\PUWEtty2DataHelper.cs" />
     <Compile Include="Data\SessionData.cs" />
     <Compile Include="Data\SessionDataStartInfo.cs" />
     <Compile Include="DebugLogViewer.cs">
@@ -242,11 +242,11 @@
     <Compile Include="RemoteFileListPanel.Designer.cs">
       <DependentUpon>RemoteFileListPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="dlgFindPutty.cs">
+    <Compile Include="dlgFindPUWEtty2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dlgFindPutty.Designer.cs">
-      <DependentUpon>dlgFindPutty.cs</DependentUpon>
+    <Compile Include="dlgFindPUWEtty2.Designer.cs">
+      <DependentUpon>dlgFindPUWEtty2.cs</DependentUpon>
     </Compile>
     <Compile Include="dlgLogin.cs">
       <SubType>Form</SubType>
@@ -279,7 +279,7 @@
     <Compile Include="Utils\NativeMethods.cs" />
     <Compile Include="Utils\PortableSettingsProvider.cs" />
     <Compile Include="Utils\PropertyNotifiableObject.cs" />
-    <Compile Include="Utils\PuttyStartInfo.cs" />
+    <Compile Include="Utils\PUWEtty2StartInfo.cs" />
     <Compile Include="Utils\SingleInstanceHelper.cs" />
     <Compile Include="Utils\SingletonToolWindowHelper.cs" />
     <Compile Include="Utils\DesktopWindowHelper.cs" />
@@ -337,8 +337,8 @@
     <EmbeddedResource Include="RemoteFileListPanel.resx">
       <DependentUpon>RemoteFileListPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dlgFindPutty.resx">
-      <DependentUpon>dlgFindPutty.cs</DependentUpon>
+    <EmbeddedResource Include="dlgFindPUWEtty2.resx">
+      <DependentUpon>dlgFindPUWEtty2.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="dlgLogin.resx">
@@ -373,8 +373,8 @@
       <DependentUpon>SessionTreeview.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctlPuttyPanel.resx">
-      <DependentUpon>ctlPuttyPanel.cs</DependentUpon>
+    <EmbeddedResource Include="ctlPUWEtty2Panel.resx">
+      <DependentUpon>ctlPUWEtty2Panel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ToolWindow.resx">
@@ -393,11 +393,11 @@
     <Compile Include="SessionTreeview.Designer.cs">
       <DependentUpon>SessionTreeview.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctlPuttyPanel.cs">
+    <Compile Include="ctlPUWEtty2Panel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ctlPuttyPanel.Designer.cs">
-      <DependentUpon>ctlPuttyPanel.cs</DependentUpon>
+    <Compile Include="ctlPUWEtty2Panel.Designer.cs">
+      <DependentUpon>ctlPUWEtty2Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="SuperPUWEtty2.cs" />
     <Compile Include="ToolWindow.cs">
